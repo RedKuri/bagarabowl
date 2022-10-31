@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bagara Bowl</title>
+    <style type="text/css">
+      @font-face {
+            font-family: 'Bugaki Regular';
+            src: url("Bugaki-Regular.otf");
+            font-weight: bold;
+      }
+      @font-face {
+            font-family: 'Bugaki Italic';
+            src: url("Bugaki-Italic.otf");
+            font-weight: bold;
+      }  
+    </style>
+</head>
+<body>
+
+
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="relative overflow-hidden bg-white">
+  <div class="mx-auto max-w-7xl">
+    <div class="relative z-10 bg-white pb-8 sm:pb-16 md:pb-20 lg:w-full lg:max-w-2xl lg:pb-28 xl:pb-32">
+      <svg class="absolute inset-y-0 right-0 hidden h-full w-48 translate-x-1/2 transform text-white lg:block" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <polygon points="50,0 100,0 50,100 0,100" />
+      </svg>
+
+      <div>
+        <div class="relative px-4 pt-6 sm:px-6 lg:px-8">
+          <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+            <div class="flex flex-shrink-0 flex-grow items-center lg:flex-grow-0">
+              <div class="flex w-full items-center justify-between md:w-auto">
+                <a href="#">
+                  <span class="sr-only">Your Company</span>
+                  <img alt="Your Company" class="h-28 w-auto" src="logo.png">
+                </a>
+                <div class="-mr-2 flex items-center md:hidden">
+                  <button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <!-- Heroicon name: outline/bars-3 -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-8">
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white">History</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Team</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white">Menu</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-700 hover:text-white">About Us</a>
+          </div>
+        </div>
+          </nav>
+        </div>
+
+        <!--
+          Mobile menu, show/hide based on menu open state.
+
+          Entering: "duration-150 ease-out"
+            From: "opacity-0 scale-95"
+            To: "opacity-100 scale-100"
+          Leaving: "duration-100 ease-in"
+            From: "opacity-100 scale-100"
+            To: "opacity-0 scale-95"
+        -->
+        <div class="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden">
+          <div class="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black ring-opacity-5">
+            <div class="flex items-center justify-between px-5 pt-4">
+              <div>
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+              </div>
+              <div class="-mr-2">
+                <button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                  <span class="sr-only">Close main menu</span>
+                  <!-- Heroicon name: outline/x-mark -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="space-y-1 px-2 pt-2 pb-3">
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Product</a>
+
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Features</a>
+
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Marketplace</a>
+
+              <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900">Company</a>
+            </div>
+            <a href="#" class="block w-full bg-gray-50 px-5 py-3 text-center font-medium text-indigo-600 hover:bg-gray-100">Log in</a>
+          </div>
+        </div>
+      </div>
+
+      <main class="mx-auto mt-10 max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+        <div class="sm:text-center lg:text-left">
+          <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+            <span class="block xl:inline" style="font-family: 'Bugaki Regular';">Bagara Bowl</span>
+          </h1>
+          <h3>
+            <span class="text-2xl block xl:inline" style="font-family: 'Bugaki Italic';">Authentic Mughlai Cuisine</span>
+          </h3>
+          <p class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+            <div class="rounded-md shadow">
+              <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:py-4 md:px-10 md:text-lg">Get started</a>
+            </div>
+            <div class="mt-3 sm:mt-0 sm:ml-3">
+              <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-100 px-8 py-3 text-base font-medium text-indigo-700 hover:bg-indigo-200 md:py-4 md:px-10 md:text-lg">Live demo</a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:h-full lg:w-full" src="https://images.unsplash.com/photo-1441911645956-df6e9bbc5496?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hhcm1pbmFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=2850&q=80" alt="">
+  </div>
+</div>
+
+
+
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="relative bg-white-800 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+  <div class="absolute inset-0">
+    <div class="bg-white-800 h-1/3 sm:h-2/3"></div>
+  </div>
+  <div class="relative max-w-7xl mx-auto">
+    <div class="text-center">
+      <h2 class="text-3xl tracking-tight font-extrabold text-gray-300 sm:text-4xl">Best tested recipes from our kitchen</h2>
+      <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-300 sm:mt-4">Choose your combo from our finesse menu.</p>
+    </div>
+    <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
+
+
+          <!-- Card/item  -->
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0">
+              <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1592309102027-ca85af1d95ed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dGFuZG9vcmklMjBjaGlja2VufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-sm font-medium text-indigo-600">
+                  <a href="#" class="hover:underline"> Chef's Favorite </a>
+                </p>
+                <a href="#" class="block mt-2">
+                  <p class="text-xl font-semibold text-gray-900">Egg Biryani and Tandoori Chicken</p>
+                  <p class="mt-3 text-base text-gray-500">Perfectly dum cooked egg biryani with a side of tandoor grilled dark chicken.</p>
+                </a>
+                <div class="block mt-6">
+                  <p class="text-3xl tracking-tight text-gray-900">$12.99</p>
+                </div>
+                <div class="mt-6">
+                  <h2 class="text-sm font-medium text-gray-900">Spice level</h2>
+
+                  <fieldset class="mt-2">
+                    <legend class="sr-only">Choose your spice level</legend>
+                    <div class="flex items-center space-x-3">
+                      <!--
+                        Active and Checked: "ring ring-offset-1"
+                        Not Active and Checked: "ring-2"
+                      -->
+                      <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400 ring ring-offset-1">
+                        <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                        <span id="color-choice-0-label" class="sr-only"> Less spicy </span>
+                        <span aria-hidden="true" class="h-8 w-8 bg-orange-300 border border-black border-opacity-10 rounded-full"></span>
+                      </label>
+
+                      <!--
+                        Active and Checked: "ring ring-offset-1"
+                        Not Active and Checked: "ring-2"
+                      -->
+                      <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                        <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-1-label">
+                        <span id="color-choice-1-label" class="sr-only"> Medium spicy </span>
+                        <span aria-hidden="true" class="h-8 w-8 bg-orange-500 border border-black border-opacity-10 rounded-full"></span>
+                      </label>
+
+                      <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                        <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-2-label">
+                        <span id="color-choice-2-label" class="sr-only"> Maximum spicy </span>
+                        <span aria-hidden="true" class="h-8 w-8 bg-red-700 border border-black border-opacity-10 rounded-full"></span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+                    <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
+              </div>
+              <div class="mt-6 flex items-center">
+                <!-- <div class="flex-shrink-0">
+                  <a href="#">
+                    <span class="sr-only">Roel Aufderehar</span>
+                    <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                  </a>
+                </div> -->
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-gray-900">
+                    <a href="#" class="hover:underline"> Keto Friendly/Low Carb </a>
+                  </p>
+                  <p class="text-sm font-medium text-gray-900">
+                    <a href="#" class="hover:underline"> 800 Calories, 6g Carbs. </a>
+                  </p>
+                  <div class="flex space-x-1 text-sm text-gray-500">
+                    <!-- <time datetime="2020-03-16"> Mar 16, 2020 </time> -->
+                    <!-- <span aria-hidden="true"> &middot; </span> -->
+                    <!-- <span> 6 min read </span> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card/item  -->
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+            <div class="flex-shrink-0">
+              <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1512058564366-18510be2db19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <p class="text-sm font-medium text-indigo-600">
+                  <a href="#" class="hover:underline"> Today's special</a>
+                </p>
+                <a href="#" class="block mt-2">
+                  <p class="text-xl font-semibold text-gray-900">Shrimp curry and Bagara</p>
+                  <p class="mt-3 text-base text-gray-500">Perfectly dum cooked bagara with roasted shrimp with spice filled gravy.</p>
+                </a>
+                <div class="block mt-6">
+                  <p class="text-3xl tracking-tight text-gray-900">$13.99</p>
+                </div>
+                <div class="mt-6">
+                  <h2 class="text-sm font-medium text-gray-900">Spice level</h2>
+                  <fieldset class="mt-2">
+                    <legend class="sr-only">Choose your spice level</legend>
+                    <div class="flex items-center space-x-3">
+                      <!--
+                        Active and Checked: "ring ring-offset-1"
+                        Not Active and Checked: "ring-2"
+                      -->
+                      <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400 ring ring-offset-1">
+                        <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                        <span id="color-choice-0-label" class="sr-only"> Less spicy </span>
+                        <span aria-hidden="true" class="h-8 w-8 bg-orange-300 border border-black border-opacity-10 rounded-full"></span>
+                      </label>
+                      <!--
+                        Active and Checked: "ring ring-offset-1"
+                        Not Active and Checked: "ring-2"
+                      -->
+                      <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                        <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-1-label">
+                        <span id="color-choice-1-label" class="sr-only"> Medium spicy </span>
+                        <span aria-hidden="true" class="h-8 w-8 bg-orange-500 border border-black border-opacity-10 rounded-full"></span>
+                      </label>
+
+                      <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                        <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-2-label">
+                        <span id="color-choice-2-label" class="sr-only"> Maximum spicy </span>
+                        <span aria-hidden="true" class="h-8 w-8 bg-red-700 border border-black border-opacity-10 rounded-full"></span>
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+                <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
+              </div>
+              <div class="mt-6 flex items-center">
+                <!-- <div class="flex-shrink-0">
+                  <a href="#">
+                    <span class="sr-only">Roel Aufderehar</span>
+                    <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                  </a>
+                </div> -->
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-gray-900">
+                    <a href="#" class="hover:underline"> Keto Friendly/Low Carb </a>
+                  </p>
+                  <p class="text-sm font-medium text-gray-900">
+                    <a href="#" class="hover:underline"> 800 Calories, 6g Carbs. </a>
+                  </p>
+                  <div class="flex space-x-1 text-sm text-gray-500">
+                    <!-- <time datetime="2020-03-16"> Mar 16, 2020 </time> -->
+                    <!-- <span aria-hidden="true"> &middot; </span> -->
+                    <!-- <span> 6 min read </span> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Card/item  -->
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1627552313112-3720a0cfae25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80" alt="">
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+            <p class="text-sm font-medium text-indigo-600">
+              <a href="#" class="hover:underline"> Best seller </a>
+            </p>
+            <a href="#" class="block mt-2">
+              <p class="text-xl font-semibold text-gray-900">Kheema curry and Bagara</p>
+              <p class="mt-3 text-base text-gray-500">Perfectly dum cooked egg biryani with a side of tandoor grilled dark chicken.</p>
+            </a>
+            <div class="block mt-6">
+              <p class="text-3xl tracking-tight text-gray-900">$12.99</p>
+            </div>
+
+
+
+            <div class="mt-6">
+              <h2 class="text-sm font-medium text-gray-900">Spice level</h2>
+
+              <fieldset class="mt-2">
+                <legend class="sr-only">Choose your spice level</legend>
+                <div class="flex items-center space-x-3">
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400 ring ring-offset-1">
+                    <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                    <span id="color-choice-0-label" class="sr-only"> Less spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-300 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-1-label">
+                    <span id="color-choice-1-label" class="sr-only"> Medium spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-500 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-2-label">
+                    <span id="color-choice-2-label" class="sr-only"> Maximum spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-red-700 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
+          </div>
+          <div class="mt-6 flex items-center">
+            <!-- <div class="flex-shrink-0">
+              <a href="#">
+                <span class="sr-only">Roel Aufderehar</span>
+                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </a>
+            </div> -->
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> Keto Friendly/Low Carb </a>
+              </p>
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> 800 Calories, 6g Carbs. </a>
+              </p>
+              <div class="flex space-x-1 text-sm text-gray-500">
+                <!-- <time datetime="2020-03-16"> Mar 16, 2020 </time> -->
+                <!-- <span aria-hidden="true"> &middot; </span> -->
+                <!-- <span> 6 min read </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+          <!-- Card/item  -->
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1596797038530-2c107229654b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bXV0dG9uJTIwY3Vycnl8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+<!--            <p class="text-sm font-medium text-indigo-600">-->
+<!--              <a href="#" class="hover:underline"> Chef's Favorite </a>-->
+<!--            </p>-->
+            <a href="#" class="block mt-2">
+              <p class="text-xl font-semibold text-gray-900">Egg Biryani and Tandoori Chicken</p>
+              <p class="mt-3 text-base text-gray-500">Perfectly dum cooked egg biryani with a side of tandoor grilled dark chicken.</p>
+            </a>
+            <div class="block mt-6">
+              <p class="text-3xl tracking-tight text-gray-900">$12.99</p>
+            </div>
+
+
+
+            <div class="mt-6">
+              <h2 class="text-sm font-medium text-gray-900">Spice level</h2>
+
+              <fieldset class="mt-2">
+                <legend class="sr-only">Choose your spice level</legend>
+                <div class="flex items-center space-x-3">
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400 ring ring-offset-1">
+                    <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                    <span id="color-choice-0-label" class="sr-only"> Less spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-300 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-1-label">
+                    <span id="color-choice-1-label" class="sr-only"> Medium spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-500 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-2-label">
+                    <span id="color-choice-2-label" class="sr-only"> Maximum spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-red-700 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
+          </div>
+          <div class="mt-6 flex items-center">
+            <!-- <div class="flex-shrink-0">
+              <a href="#">
+                <span class="sr-only">Roel Aufderehar</span>
+                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </a>
+            </div> -->
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> Keto Friendly/Low Carb </a>
+              </p>
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> 800 Calories, 6g Carbs. </a>
+              </p>
+              <div class="flex space-x-1 text-sm text-gray-500">
+                <!-- <time datetime="2020-03-16"> Mar 16, 2020 </time> -->
+                <!-- <span aria-hidden="true"> &middot; </span> -->
+                <!-- <span> 6 min read </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+          <!-- Card/item  -->
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1505253758473-96b7015fcd40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG11dHRvbiUyMGN1cnJ5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+<!--            <p class="text-sm font-medium text-indigo-600">-->
+<!--              <a href="#" class="hover:underline"> Chef's Favorite </a>-->
+<!--            </p>-->
+            <a href="#" class="block mt-2">
+              <p class="text-xl font-semibold text-gray-900">Egg Biryani and Tandoori Chicken</p>
+              <p class="mt-3 text-base text-gray-500">Perfectly dum cooked egg biryani with a side of tandoor grilled dark chicken.</p>
+            </a>
+            <div class="block mt-6">
+              <p class="text-3xl tracking-tight text-gray-900">$12.99</p>
+            </div>
+
+
+
+            <div class="mt-6">
+              <h2 class="text-sm font-medium text-gray-900">Spice level</h2>
+
+              <fieldset class="mt-2">
+                <legend class="sr-only">Choose your spice level</legend>
+                <div class="flex items-center space-x-3">
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400 ring ring-offset-1">
+                    <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                    <span id="color-choice-0-label" class="sr-only"> Less spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-300 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-1-label">
+                    <span id="color-choice-1-label" class="sr-only"> Medium spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-500 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-2-label">
+                    <span id="color-choice-2-label" class="sr-only"> Maximum spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-red-700 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
+          </div>
+          <div class="mt-6 flex items-center">
+            <!-- <div class="flex-shrink-0">
+              <a href="#">
+                <span class="sr-only">Roel Aufderehar</span>
+                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </a>
+            </div> -->
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> Keto Friendly/Low Carb </a>
+              </p>
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> 800 Calories, 6g Carbs. </a>
+              </p>
+              <div class="flex space-x-1 text-sm text-gray-500">
+                <!-- <time datetime="2020-03-16"> Mar 16, 2020 </time> -->
+                <!-- <span aria-hidden="true"> &middot; </span> -->
+                <!-- <span> 6 min read </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+          <!-- Card/item  -->
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1559203244-78de52adba0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bXV0dG9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+<!--            <p class="text-sm font-medium text-indigo-600">-->
+<!--              <a href="#" class="hover:underline"> Chef's Favorite </a>-->
+<!--            </p>-->
+            <a href="#" class="block mt-2">
+              <p class="text-xl font-semibold text-gray-900">Egg Biryani and Tandoori Chicken</p>
+              <p class="mt-3 text-base text-gray-500">Perfectly dum cooked egg biryani with a side of tandoor grilled dark chicken.</p>
+            </a>
+            <div class="block mt-6">
+              <p class="text-3xl tracking-tight text-gray-900">$12.99</p>
+            </div>
+
+
+
+            <div class="mt-6">
+              <h2 class="text-sm font-medium text-gray-900">Spice level</h2>
+
+              <fieldset class="mt-2">
+                <legend class="sr-only">Choose your spice level</legend>
+                <div class="flex items-center space-x-3">
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400 ring ring-offset-1">
+                    <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                    <span id="color-choice-0-label" class="sr-only"> Less spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-300 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-1-label">
+                    <span id="color-choice-1-label" class="sr-only"> Medium spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-500 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-2-label">
+                    <span id="color-choice-2-label" class="sr-only"> Maximum spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-red-700 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
+          </div>
+          <div class="mt-6 flex items-center">
+            <!-- <div class="flex-shrink-0">
+              <a href="#">
+                <span class="sr-only">Roel Aufderehar</span>
+                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </a>
+            </div> -->
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> Keto Friendly/Low Carb </a>
+              </p>
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> 800 Calories, 6g Carbs. </a>
+              </p>
+              <div class="flex space-x-1 text-sm text-gray-500">
+                <!-- <time datetime="2020-03-16"> Mar 16, 2020 </time> -->
+                <!-- <span aria-hidden="true"> &middot; </span> -->
+                <!-- <span> 6 min read </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+         <!-- Card/item  -->
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmlyeWFuaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+<!--            <p class="text-sm font-medium text-indigo-600">-->
+<!--              <a href="#" class="hover:underline"> Chef's Favorite </a>-->
+<!--            </p>-->
+            <a href="#" class="block mt-2">
+              <p class="text-xl font-semibold text-gray-900">Egg Biryani and Tandoori Chicken</p>
+              <p class="mt-3 text-base text-gray-500">Perfectly dum cooked egg biryani with a side of tandoor grilled dark chicken.</p>
+            </a>
+            <div class="block mt-6">
+              <p class="text-3xl tracking-tight text-gray-900">$12.99</p>
+            </div>
+            <div class="mt-6">
+              <h2 class="text-sm font-medium text-gray-900">Spice level</h2>
+
+              <fieldset class="mt-2">
+                <legend class="sr-only">Choose your spice level</legend>
+                <div class="flex items-center space-x-3">
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400 ring ring-offset-1">
+                    <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                    <span id="color-choice-0-label" class="sr-only"> Less spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-300 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-1-label">
+                    <span id="color-choice-1-label" class="sr-only"> Medium spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-500 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-2-label">
+                    <span id="color-choice-2-label" class="sr-only"> Maximum spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-red-700 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
+          </div>
+          <div class="mt-6 flex items-center">
+            <!-- <div class="flex-shrink-0">
+              <a href="#">
+                <span class="sr-only">Roel Aufderehar</span>
+                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </a>
+            </div> -->
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> Keto Friendly/Low Carb </a>
+              </p>
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> 800 Calories, 6g Carbs. </a>
+              </p>
+              <div class="flex space-x-1 text-sm text-gray-500">
+                <!-- <time datetime="2020-03-16"> Mar 16, 2020 </time> -->
+                <!-- <span aria-hidden="true"> &middot; </span> -->
+                <!-- <span> 6 min read </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+          <!-- Card/item  -->
+          <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
+        <div class="flex-shrink-0">
+          <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmlyeWFuaXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+          <div class="flex-1">
+<!--            <p class="text-sm font-medium text-indigo-600">-->
+<!--              <a href="#" class="hover:underline"> Chef's Favorite </a>-->
+<!--            </p>-->
+            <a href="#" class="block mt-2">
+              <p class="text-xl font-semibold text-gray-900">Egg Biryani and Tandoori Chicken</p>
+              <p class="mt-3 text-base text-gray-500">Perfectly dum cooked egg biryani with a side of tandoor grilled dark chicken.</p>
+            </a>
+            <div class="block mt-6">
+              <p class="text-3xl tracking-tight text-gray-900">$12.99</p>
+            </div>
+
+
+
+            <div class="mt-6">
+              <h2 class="text-sm font-medium text-gray-900">Spice level</h2>
+
+              <fieldset class="mt-2">
+                <legend class="sr-only">Choose your spice level</legend>
+                <div class="flex items-center space-x-3">
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400 ring ring-offset-1">
+                    <input type="radio" name="color-choice" value="Black" class="sr-only" aria-labelledby="color-choice-0-label">
+                    <span id="color-choice-0-label" class="sr-only"> Less spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-300 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <!--
+                    Active and Checked: "ring ring-offset-1"
+                    Not Active and Checked: "ring-2"
+                  -->
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-1-label">
+                    <span id="color-choice-1-label" class="sr-only"> Medium spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-orange-500 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+
+                  <label class="-m-0.5 relative p-0.5 rounded-full flex items-center justify-center cursor-pointer focus:outline-none ring-gray-400">
+                    <input type="radio" name="color-choice" value="Heather Grey" class="sr-only" aria-labelledby="color-choice-2-label">
+                    <span id="color-choice-2-label" class="sr-only"> Maximum spicy </span>
+                    <span aria-hidden="true" class="h-8 w-8 bg-red-700 border border-black border-opacity-10 rounded-full"></span>
+                  </label>
+                </div>
+              </fieldset>
+            </div>
+
+            <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
+          </div>
+          <div class="mt-6 flex items-center">
+            <!-- <div class="flex-shrink-0">
+              <a href="#">
+                <span class="sr-only">Roel Aufderehar</span>
+                <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </a>
+            </div> -->
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> Keto Friendly/Low Carb </a>
+              </p>
+              <p class="text-sm font-medium text-gray-900">
+                <a href="#" class="hover:underline"> 800 Calories, 6g Carbs. </a>
+              </p>
+              <div class="flex space-x-1 text-sm text-gray-500">
+                <!-- <time datetime="2020-03-16"> Mar 16, 2020 </time> -->
+                <!-- <span aria-hidden="true"> &middot; </span> -->
+                <!-- <span> 6 min read </span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
